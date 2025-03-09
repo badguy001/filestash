@@ -264,7 +264,7 @@ export function AudioPlayer({ filename, data }) {
         const link = Chromecast.createLink(data);
         const media = new chrome.cast.media.MediaInfo(
             link,
-            getMimeType(data),
+            getMimeType(filename),
         );
         media.metadata = new chrome.cast.media.MusicTrackMediaMetadata()
         media.metadata.title = filename.substr(0, filename.lastIndexOf(filepath.extname(filename)));
